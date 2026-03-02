@@ -453,6 +453,11 @@ html[data-theme='dark'] .logo-itu {
   gap: 0.55rem;
 }
 
+.brand-line p {
+  margin: 0;
+  font-weight: 700;
+}
+
 
 .logo-itu-inline {
   width: 20px;
