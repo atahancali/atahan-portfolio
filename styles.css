@@ -438,9 +438,9 @@ h1 {
 }
 
 .logo-itu-inline {
-  width: 16px;
-  height: 10px;
-  opacity: 0.9;
+  width: 26px;
+  height: 16px;
+  opacity: 1;
   mix-blend-mode: multiply;
 }
 
@@ -453,13 +453,13 @@ html[data-theme='dark'] .logo-itu-inline {
 }
 
 .edu-logo {
-  width: 16px;
-  height: 10px;
+  width: 26px;
+  height: 16px;
 }
 
 .brand-line {
   display: grid;
-  grid-template-columns: 18px minmax(0, 1fr);
+  grid-template-columns: 28px minmax(0, 1fr);
   align-items: center;
   gap: 0.55rem;
 }
