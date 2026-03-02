@@ -153,8 +153,8 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  max-width: 14ch;
+  font-size: clamp(1.65rem, 3.4vw, 2.35rem);
+  max-width: 24ch;
   line-height: 0.93;
 }
 
@@ -399,20 +399,52 @@ h1 {
 }
 
 .company-logo {
-  width: 34px;
-  height: 20px;
   object-fit: contain;
   object-position: center;
-  border: 1px solid var(--line);
-  border-radius: 0.35rem;
-  background: #fff;
-  padding: 0.12rem 0.25rem;
+  border: 0;
+  background: transparent;
+  padding: 0;
   flex: 0 0 auto;
 }
 
-.edu-logo {
-  width: 44px;
+.logo-nike {
+  width: 26px;
+  height: 16px;
+  mix-blend-mode: multiply;
+}
+
+.logo-nesine {
+  width: 22px;
   height: 22px;
+}
+
+.logo-kpmg {
+  width: 40px;
+  height: 16px;
+  mix-blend-mode: multiply;
+}
+
+.logo-birader {
+  width: 20px;
+  height: 20px;
+}
+
+.logo-itu {
+  width: 30px;
+  height: 18px;
+  mix-blend-mode: multiply;
+}
+
+html[data-theme='dark'] .logo-nike,
+html[data-theme='dark'] .logo-kpmg,
+html[data-theme='dark'] .logo-itu {
+  filter: invert(1) brightness(1.2);
+  mix-blend-mode: screen;
+}
+
+.edu-logo {
+  width: 30px;
+  height: 18px;
 }
 
 .brand-line {
