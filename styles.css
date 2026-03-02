@@ -97,11 +97,9 @@ input {
   line-height: 1.1;
 }
 
-.resume-btn {
-  cursor: pointer;
-}
-
-.theme-toggle {
+.resume-btn,
+.theme-toggle,
+summary {
   cursor: pointer;
 }
 
@@ -155,7 +153,7 @@ h3 {
 h1 {
   font-size: clamp(1.45rem, 2.9vw, 2rem);
   max-width: 30ch;
-  line-height: 0.93;
+  line-height: 1.08;
 }
 
 .headline {
@@ -205,7 +203,6 @@ h1 {
 
 .accordion summary {
   list-style: none;
-  cursor: pointer;
 }
 
 .accordion summary::-webkit-details-marker {
@@ -229,8 +226,18 @@ h1 {
 
 .chev {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 0;
   font-weight: 700;
+}
+
+.chev::before {
+  content: '+';
+  font-size: 1rem;
+}
+
+.menu-item[open] .chev::before,
+.item[open] .chev::before {
+  content: '-';
 }
 
 .menu-item[open] .chev,
@@ -392,7 +399,8 @@ h1 {
 }
 
 .company-line {
-  display: flex;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
   align-items: center;
   gap: 0.55rem;
   min-width: 0;
@@ -404,51 +412,54 @@ h1 {
   border: 0;
   background: transparent;
   padding: 0;
-  flex: 0 0 auto;
+  justify-self: center;
 }
 
 .logo-nike {
-  width: 26px;
-  height: 16px;
+  width: 22px;
+  height: 13px;
   mix-blend-mode: multiply;
 }
 
 .logo-nesine {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .logo-kpmg {
-  width: 40px;
-  height: 16px;
+  width: 28px;
+  height: 12px;
   mix-blend-mode: multiply;
 }
 
 .logo-birader {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
-.logo-itu {
-  width: 30px;
-  height: 18px;
+.logo-itu-inline {
+  width: 16px;
+  height: 10px;
+  opacity: 0.9;
   mix-blend-mode: multiply;
 }
 
 html[data-theme='dark'] .logo-nike,
 html[data-theme='dark'] .logo-kpmg,
-html[data-theme='dark'] .logo-itu {
-  filter: invert(1) brightness(1.2);
+html[data-theme='dark'] .logo-itu-inline {
+  filter: invert(1) brightness(1.15);
   mix-blend-mode: screen;
+  opacity: 0.95;
 }
 
 .edu-logo {
-  width: 30px;
-  height: 18px;
+  width: 16px;
+  height: 10px;
 }
 
 .brand-line {
-  display: flex;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
   align-items: center;
   gap: 0.55rem;
 }
@@ -456,18 +467,4 @@ html[data-theme='dark'] .logo-itu {
 .brand-line p {
   margin: 0;
   font-weight: 700;
-}
-
-
-.logo-itu-inline {
-  width: 20px;
-  height: 12px;
-  opacity: 0.9;
-  mix-blend-mode: multiply;
-}
-
-html[data-theme='dark'] .logo-itu-inline {
-  filter: invert(1) brightness(1.15);
-  mix-blend-mode: screen;
-  opacity: 0.95;
 }
