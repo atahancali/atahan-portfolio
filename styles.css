@@ -117,7 +117,7 @@ summary {
   padding-right: 1.3rem;
 }
 
-.left-rail img {
+.left-rail .profile-photo {
   width: 160px;
   height: 200px;
   object-fit: cover;
@@ -388,7 +388,7 @@ h1 {
     padding-bottom: 1rem;
   }
 
-  .left-rail img {
+  .left-rail .profile-photo {
     width: 144px;
     height: 180px;
   }
