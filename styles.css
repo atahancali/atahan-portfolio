@@ -468,3 +468,45 @@ html[data-theme='dark'] .logo-itu-inline {
   margin: 0;
   font-weight: 700;
 }
+
+.role-badge {
+  display: inline-block;
+  margin-left: 0.45rem;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: var(--muted);
+}
+
+.head-right .resume-btn {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.head-right {
+  row-gap: 0.45rem;
+}
+
+@media (max-width: 560px) {
+  .head-right {
+    width: 100%;
+  }
+
+  .head-right a,
+  .head-right .resume-btn,
+  .head-right .theme-toggle {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .company-line {
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 0.45rem;
+  }
+}
