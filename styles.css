@@ -453,18 +453,16 @@ html[data-theme='dark'] .logo-itu {
   gap: 0.55rem;
 }
 
-.school-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 34px;
-  height: 20px;
-  padding: 0 0.45rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: var(--ink);
-  background: color-mix(in srgb, var(--card) 88%, transparent);
+
+.logo-itu-inline {
+  width: 20px;
+  height: 12px;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+}
+
+html[data-theme='dark'] .logo-itu-inline {
+  filter: invert(1) brightness(1.15);
+  mix-blend-mode: screen;
+  opacity: 0.95;
 }
