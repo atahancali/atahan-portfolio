@@ -533,6 +533,17 @@ html[data-theme='dark'] .logo-itu-inline {
   color: var(--muted);
 }
 
+.tag-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--space-2);
+}
+
+.tag-wrap .role-badge {
+  margin-left: 0;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(16px);
